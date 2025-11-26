@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET606 Research Tools: Comparative Analysis</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind with Soft Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-bg': '#F7F7F7',
+                        'soft-teal': '#66B2B2',
+                        'soft-accent': '#FFD7B0', // Soft Orange/Peach
+                        'primary-text': '#333333',
+                        'card-bg': '#FFFFFF',
+                        'stage-hover': '#CCE5E5',
+                        'header-bg': '#B0D9D9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for better readability and presentation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: theme('colors.soft-bg');
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .card {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: theme('colors.stage-hover'); 
+            color: theme('colors.primary-text');
+            font-weight: 600;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: theme('colors.soft-bg');
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 text-primary-text">
+
+    <div class="container mx-auto">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12 py-8 bg-header-bg text-primary-text card shadow-lg border-b-4 border-soft-teal">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                ET606 Research Tools: Comparative Analysis
+            </h1>
+            <p class="mt-2 text-xl font-medium">
+                Educational Technology, IIT Bombay
+            </p>
+        </header>
+
+        <!-- Assignment Description Card -->
+        <div class="card bg-card-bg p-6 mb-12 shadow-lg border-l-4 border-soft-teal">
+            <h2 class="text-2xl font-bold text-soft-teal mb-4 border-b border-soft-accent pb-2">The Assignment Task</h2>
+            <p class="text-gray-700">
+                This project involved a comprehensive review and hands-on evaluation of various digital tools designed to streamline the academic literature review process. The goal was to understand how a researcher navigates the entire research workflow—from initial discovery to final synthesis—using a mix of traditional, AI-powered, and visual platforms.
+            </p>
+            <p class="mt-3 text-gray-700 font-semibold">
+                Core Research Question: <span class="text-soft-teal italic">"How Learning Analytics and Educational Data Mining are implemented in MOOCs."</span>
+            </p>
+        </div>
+
+        <!-- Research Stages Section -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-primary-text mb-6 text-center">5 Key Stages of the Literature Review</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+                <!-- Stage 1 -->
+                <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                    <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">1</div>
+                    <h3 class="font-semibold text-lg">Searching & Discovery</h3>
+                    <p class="text-sm">Finding the foundational and current papers. Tools: Google Scholar, Consensus.</p>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                    <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">2</div>
+                    <h3 class="font-semibold text-lg">Organizing & Managing</h3>
+                    <p class="text-sm">Structuring the collected sources and references. Tools: SCISPACE, Novix.</p>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                    <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">3</div>
+                    <h3 class="font-semibold text-lg">Visualizing Connections</h3>
+                    <p class="text-sm">Mapping citation networks and trends. Tools: Research Rabbit, Connected Papers. [Image of a research paper citation network diagram]</p>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                    <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">4</div>
+                    <h3 class="font-semibold text-lg">Analyzing & Synthesizing</h3>
+                    <p class="text-sm">Extracting, comparing, and summarizing findings. Tools: Novix, SCISPACE, Elicit.</p>
+                </div>
+
+                <!-- Stage 5 -->
+                <div class="card bg-stage-hover p-5 text-center transition duration-300 hover:bg-soft-teal hover:text-white transform hover:-translate-y-1">
+                    <div class="text-3xl font-extrabold mb-2 text-soft-teal hover:text-white">5</div>
+                    <h3 class="font-semibold text-lg">Writing & Presentation</h3>
+                    <p class="text-sm">Drafting the report and creating interactive outputs. Tools: SCISPACE, H5P.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Comparative Analysis Table -->
+        <div class="card bg-card-bg shadow-xl mb-12">
+            <h2 class="text-3xl font-bold p-6 text-soft-teal border-b border-soft-accent">Comparative Analysis of Research Tools</h2>
+
+            <div class="overflow-x-auto">
+                <table class="comparison-table w-full text-sm">
+                    <thead>
+                        <tr>
+                            <th class="w-1/6">Tool</th>
+                            <th class="w-1/12">Type</th>
+                            <th class="w-4/12">Strengths</th>
+                            <th class="w-4/12">Limitations</th>
+                            <th class="w-2/12">Best-fit Stage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google Scholar</td>
+                            <td>Traditional</td>
+                            <td>Comprehensive coverage, simple, free, prioritizes highly-cited papers.</td>
+                            <td>No synthesis or visualization features, limited advanced search filters.</td>
+                            <td>Searching</td>
+                        </tr>
+                        <tr>
+                            <td>SCISPACE</td>
+                            <td>AI-based</td>
+                            <td>Deep synthesis, structured reports, references mapped, AI Copilot for paper interaction.</td>
+                            <td>May require premium access for full features (e.g., unlimited literature reviews).</td>
+                            <td>Analysis & Writing</td>
+                        </tr>
+                        <tr>
+                            <td>Novix</td>
+                            <td>AI-based</td>
+                            <td>Phased workflow, detailed report generation, good for organization.</td>
+                            <td>Limited transparency, comparison features are less granular.</td>
+                            <td>Organization & Writing</td>
+                        </tr>
+                        <tr>
+                            <td>Consensus</td>
+                            <td>AI-based</td>
+                            <td>Quick summaries, citation metrics, excellent for quick relevance check.</td>
+                            <td>Short summaries, shallow depth of analysis.</td>
+                            <td>Searching</td>
+                        </tr>
+                        <tr>
+                            <td>Research Rabbit</td>
+                            <td>Visual</td>
+                            <td>Interactive citation graphs, fast and exhaustive discovery, collection-based recommendations.</td>
+                            <td>Needs an initial input paper, can be overwhelming with results.</td>
+                            <td>Visualization</td>
+                        </tr>
+                        <tr>
+                            <td>Connected Papers</td>
+                            <td>Visual</td>
+                            <td>Clearly maps citation lineage (Prior/Derivative Works), very simple UI, fast loading.</td>
+                            <td>Requires a single seed paper, less overall functionality compared to competitors.</td>
+                            <td>Visualization</td>
+                        </tr>
+                        <tr>
+                            <td>Elicit</td>
+                            <td>AI Assistant</td>
+                            <td>Simplified summaries, organizes findings into customizable synthesis tables.</td>
+                            <td>Surface-level understanding, may lack the critical depth of full analysis.</td>
+                            <td>Analysis</td>
+                        </tr>
+                        <tr>
+                            <td>H5P</td>
+                            <td>Interactive</td>
+                            <td>Excellent for creating interactive presentations and surveys, good for knowledge check.</td>
+                            <td>Not designed for literature analysis or search itself.</td>
+                            <td>Presentation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Conclusion & Recommended Pipeline -->
+        <div class="card bg-soft-accent p-6 text-primary-text shadow-lg border-t-4 border-soft-teal">
+            <h2 class="text-2xl font-bold mb-4 border-b border-primary-text pb-2 text-soft-teal">Conclusion: The Recommended Hybrid Pipeline</h2>
+
+            <p class="text-lg font-medium">
+                The most effective literature review relies on a Hybrid Approach, leveraging each tool for its specific strength in the workflow.
+            </p>
+
+            <div class="mt-4 p-4 bg-card-bg rounded-lg shadow-inner">
+                <h3 class="font-bold text-xl text-soft-teal mb-3">Effective Pipeline Flow:</h3>
+                <div class="flex flex-wrap items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <span class="text-lg font-semibold bg-soft-teal text-white px-4 py-2 rounded-full shadow-md transition duration-300 hover:scale-105">
+                        1. Google Scholar + Consensus
+                    </span>
+                    <span class="text-xl font-extrabold text-primary-text hidden md:inline-block">→</span>
+                    <span class="text-lg font-semibold bg-soft-teal text-white px-4 py-2 rounded-full shadow-md transition duration-300 hover:scale-105">
+                        2. Research Rabbit + Connected Papers
+                    </span>
+                    <span class="text-xl font-extrabold text-primary-text hidden md:inline-block">→</span>
+                    <span class="text-lg font-semibold bg-soft-teal text-white px-4 py-2 rounded-full shadow-md transition duration-300 hover:scale-105">
+                        3. SCISPACE + Novix
+                    </span>
+                </div>
+
+                <ul class="mt-6 space-y-2 text-base list-disc pl-5">
+                    <li><strong class="text-soft-teal">Quick Find:</strong> Google Scholar and Consensus for initial high-level search.</li>
+                    <li><strong class="text-soft-teal">Network Mapping:</strong> Research Rabbit to visualize how papers and authors are interconnected.</li>
+                    <li><strong class="text-soft-teal">Deep Dive:</strong> SCISPACE and Novix for analysis, content extraction, and report drafting.</li>
+                    <li><strong class="text-soft-teal">Support Tools:</strong> Elicit for simplifying difficult papers, and H5P for interactive result presentation.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Educational Technology, IIT Bombay. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
